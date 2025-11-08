@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom admin login styles */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Ensure input field borders are clearly visible on all devices including mobile */
+input[type="email"],
+input[type="password"] {
+    @apply border-gray-300 !important;
+}
+
+/* Mobile-specific styles for better visibility of input fields */
+@media (max-width: 640px) {
+    input[type="email"],
+    input[type="password"] {
+        @apply border-2 border-gray-400 rounded-md shadow-none !important;
+    }
+    
+    /* Ensure focus states are also visible on mobile */
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+        @apply border-2 border-primary-500 ring-2 ring-primary-500/50 !important;
+    }
+}
