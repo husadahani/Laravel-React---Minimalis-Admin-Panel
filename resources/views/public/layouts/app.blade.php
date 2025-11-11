@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Website')</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="{{ mix('css/public.css') }}" rel="stylesheet">
+    @vite('resources/css/public.css')
 </head>
 <body class="h-full bg-gray-50 font-sans dark:bg-gray-900">
     <!-- Dark mode support -->
@@ -42,7 +42,7 @@
         lucide.createIcons();
     </script>
 
-    <script src="{{ mix('js/public.js') }}"></script>
+    @vite('resources/js/public.js')
     @yield('scripts')
 </body>
 </html>

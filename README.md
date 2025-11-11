@@ -1,66 +1,296 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# LAVA - Laravel E-Commerce Platform
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Laravel](https://img.shields.io/badge/Laravel-9.19-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-8.0+-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-5.7+-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-7.2-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 
-## About Laravel
+LAVA adalah platform e-commerce modern yang dibangun dengan Laravel 9, menawarkan antarmuka publik dan panel admin yang lengkap dengan fitur-fitur canggih.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📋 Tentang Project
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+LAVA adalah sistem e-commerce yang dirancang untuk memberikan pengalaman berbelanja yang optimal bagi pelanggan dan manajemen yang mudah bagi admin. Platform ini menggunakan teknologi modern dan arsitektur yang scalable.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 🛠️ Teknologi Stack
 
-## Learning Laravel
+- **Backend**: Laravel 9.19 (PHP 8.0+)
+- **Frontend**: Vite 7.2.2, TailwindCSS 3.4.18
+- **Database**: MySQL
+- **Authentication**: Laravel Sanctum untuk API tokens
+- **Build Tools**: Laravel Vite Plugin, PostCSS, Autoprefixer
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 🏗️ Struktur Project
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+```
+lava/
+├── app/                     # Aplikasi utama
+│   ├── Http/               # Controllers, middleware, routes
+│   ├── Models/             # Model Eloquent
+│   └── Services/           # Services dan business logic
+├── config/                 # Konfigurasi aplikasi
+├── database/              # Migrations, factories, seeders
+├── public/                # File publik (assets compile)
+├── resources/             # Views, CSS, JavaScript
+│   ├── views/             # Template Blade
+│   │   ├── public/        # Template frontend
+│   │   └── admin/         # Template admin
+│   └── js/                # File JavaScript
+├── routes/                # Definisi routes
+├── storage/               # File storage
+└── tests/                 # PHPUnit tests
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## ✨ Fitur Utama
 
-## Laravel Sponsors
+### 🌐 Frontend (Website Public)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- **Halaman Depan** - Welcome page dengan hero section dan fitur unggulan
+- **Tentang Kami** - Informasi perusahaan dan cerita
+- **Kontak** - Form kontak untuk pelanggan
+- **Kebijakan Privasi** - Kebijakan privasi pengguna
+- **Syarat & Ketentuan** - Ketentuan layanan
+- **Desain Responsif** - Tampilan optimal di semua perangkat
 
-### Premium Partners
+### 🏢 Panel Admin
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+- **Dashboard** - Ringkasan performa bisnis
+- **Produk** - Manajemen produk (CRUD)
+- **Orders** - Tracking dan manajemen pesanan
+- **Users** - Manajemen pengguna
+- **Blog** - Manajemen konten blog
+- **Marketing** - Alat pemasaran dan promosi
+- **Logs** - Log sistem dan aktivitas
+- **Settings** - Konfigurasi umum
+- **Site Settings** - Pengaturan situs
+- **SMTP** - Konfigurasi email
 
-## Contributing
+### 🔐 Sistem Keamanan
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- **Dual Authentication Guards** - Terpisah untuk admin dan pengguna publik
+- **Admin Authentication** - Sistem login admin custom
+- **CSRF Protection** - Proteksi CSRF aktif
+- **Input Validation** - Validasi dan sanitasi input
+- **Secure Sessions** - Manajemen session yang aman
 
-## Code of Conduct
+### 🚀 Development Tools
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- **Vite** - Build tool modern dengan hot reload
+- **TailwindCSS** - Framework CSS utility-first
+- **Laravel Vite Plugin** - Integrasi Laravel dengan Vite
+- **PostCSS & Autoprefixer** - Processing CSS modern
 
-## Security Vulnerabilities
+## 🚀 Cara Development
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Prasyarat
 
-## License
+- PHP 8.0.2 atau lebih tinggi
+- MySQL 5.7+
+- Node.js 16+ (untuk Vite)
+- Composer 2.0+
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Instalasi
+
+1. **Clone Repository**
+```bash
+git clone https://github.com/your-username/lava.git
+cd lava
+```
+
+2. **Instalasi PHP Dependencies**
+```bash
+composer install
+```
+
+3. **Instalasi JavaScript Dependencies**
+```bash
+npm install
+```
+
+4. **Konfigurasi Environment**
+```bash
+cp .env.example .env
+```
+Edit `.env` file dengan konfigurasi database:
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=app_lava
+DB_USERNAME=app_lava
+DB_PASSWORD=
+```
+
+5. **Generate Application Key**
+```bash
+php artisan key:generate
+```
+
+6. **Run Migrations**
+```bash
+php artisan migrate
+```
+
+7. **Build Assets**
+```bash
+# Development (dengan hot reload)
+npm run dev
+
+# Production
+npm run build
+```
+
+8. **Start Laravel Server**
+```bash
+php artisan serve
+```
+
+### Development Commands
+
+```bash
+# Development server dengan hot reload
+npm run dev
+
+# Build production
+npm run build
+
+# Laravel development server
+php artisan serve
+
+# List semua routes
+php artisan route:list
+
+# Database migrations
+php artisan migrate
+
+# Database rollback
+php artisan migrate:rollback
+
+# Clear cache
+php artisan cache:clear
+php artisan config:clear
+```
+
+### Access Application
+
+- **Frontend**: http://localhost:8000
+- **Admin Login**: http://localhost:8000/admin/login
+- **Admin Dashboard**: http://localhost:8000/admin
+
+## 📊 Database
+
+### Tabel Utama
+
+- `users` - Pengguna publik
+- `admins` - Admin users
+- `products` - Produk e-commerce
+- `orders` - Pesanan pelanggan
+- `order_items` - Item pesanan
+- `blogs` - Konten blog
+- `categories` - Kategori produk
+- `personal_access_tokens` - API tokens
+- `password_resets` - Reset password
+
+### Database Setup
+
+```bash
+# Create database
+mysql -u root -p -e "CREATE DATABASE app_lava;"
+
+# Run migrations
+php artisan migrate
+
+# Optional: Run seeders
+php artisan db:seed
+```
+
+## 🔧 Konfigurasi
+
+### Environment Variables
+
+Pastikan file `.env` mengandung:
+
+```
+APP_ENV=local
+APP_DEBUG=true
+APP_URL=http://localhost:8000
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=app_lava
+DB_USERNAME=app_lava
+DB_PASSWORD=
+
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=your_username
+MAIL_PASSWORD=your_password
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS="hello@example.com"
+MAIL_FROM_NAME="${APP_NAME}"
+```
+
+### Vite Configuration
+
+File `vite.config.js` dikonfigurasi dengan:
+
+- Entry points untuk public, admin, dan login
+- TailwindCSS integration
+- Path aliases untuk import yang bersih
+- Hot module replacement
+
+## 🧪 Testing
+
+```bash
+# Run PHP tests
+php artisan test
+
+# Run JavaScript tests
+npm run test
+
+# Run tests with coverage
+php artisan test --coverage
+```
+
+## 📁 File Penting
+
+### Routes
+
+- `routes/web.php` - Public routes
+- `routes/admin.php` - Admin routes
+- `routes/api.php` - API routes
+
+### Controllers
+
+- `app/Http/Controllers/PublicController.php` - Frontend controller
+- `app/Http/Controllers/AdminController.php` - Admin controller
+- `app/Http/Controllers/Auth/` - Authentication controllers
+
+### Views
+
+- `resources/views/public/` - Frontend templates
+- `resources/views/admin/` - Admin templates
+- `resources/views/layouts/` - Layout templates
+
+## 🔒 Security Best Practices
+
+1. **Update dependencies** secara teratur
+2. **Gunakan environment variables** untuk sensitive data
+3. **Enable HTTPS** di production
+4. **Regular backups** database
+5. **Monitor logs** untuk aktivitas mencurigakan
+6. **Implement rate limiting** untuk API endpoints
+
+## 🤝 Contributing
+
+1. Fork repository
+2. Create feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes (`git commit -m 'Add amazing feature'`)
+4. Push to branch (`git push origin feature/amazing-feature`)
+5. Open Pull Request
+
+---
+
+Built with ❤️ using Laravel
